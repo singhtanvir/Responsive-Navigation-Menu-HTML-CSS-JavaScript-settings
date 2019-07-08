@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+$iPad: 1024px;
+$S9: 740px;
+$iPhone-6-7-8: 667px;
+$iPhone-6-7-8-Plus: 736px;
+$iPhone-X-XS: 812px;
+$Kindle-Fire-HDX: 1280px;
+$normal-pc: 1080px;
+body{
+    background: #3d3d3d;
+    font-family: 'Oswald';
+}
+.navbar{
+    background: #3d3d3d;
+    .navbar-brand{
+        margin-top: 1em;
+        margin-left: 2em;
+        font-size: 1.25em;
+        color: #f1f2f6;
+    }
+    .nav-icon{
+        img{
+            height: 3em;
+            width: 2.5em;
+            margin-right: 2em;
+            position: absolute;
+            top: 50%;
+            left: 95%;
+            transform: translate(-50%, -50%);
+            transition: 0.3s;
+        }
+        img:hover{
+            height: 3.25em;
+            width: 3em;
+            cursor: pointer;
+        }
+    }
+    @media screen and (max-width: $S9){
+        .navbar-brand{
+            margin-left: 0em;
+            img{
+                height: 30px;
+            }
+        }
+        .nav-icon{
+            img{
+                height: 2em;
+                width: 1.5em;
+                top: -20px;
+                margin-left: -1em;
+            }
+        }
+    }
+    @media screen and (max-width: $iPad){
+        .navbar-brand{
+            img{
+                height: 30px;
+                margin-top: 1em;
+            }
+        }
+        .nav-icon{
+            img{
+                height: 3em;
+                width: 2.5em;
+                margin-top: 1em;
+                margin-left: -2em;
+            }
+        }
+    }
+    @media screen and (max-width: $iPhone-6-7-8){
+        .navbar-brand{
+            margin-left: 0em;
+            img{
+                height: 30px;
+            }
+        }
+        .nav-icon{
+            img{
+                height: 2em;
+                width: 1.5em;
+                top: -35px;
+                margin-left: -1em;
+            }
+        }
+    }
+}
+#nav-menu{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    color: #f1f2f6;
+    font-family: 'Anton';
+    display: visible;
+    transition: 0.5s;
+    a{
+        color: #dfe6e9;
+        font-size: 4em;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #ff4757;
+        font-size: 5em;
+    }
+    .left-side{
+        display: grid;
+        text-align: right;
+        position: absolute;
+        top: 50%;
+        left: 27.5%;
+        transform: translate(-50%, -50%);
+        a:hover::before{
+            color: #f1f2f6;
+        }
+        a:nth-child(1):hover::before{
+            content: '01 ';
+            font-size: 0.5em;
+        }
+        a:nth-child(2):hover::before{
+            content: '02 ';
+            font-size: 0.5em;
+        }
+        a:nth-child(3):hover::before{
+            content: '03 ';
+            font-size: 0.5em;
+        }
+        a:nth-child(4):hover::before{
+            content: '04 ';
+            font-size: 0.5em;
+        }
+        a:nth-child(5):hover::before{
+            content: '05 ';
+            font-size: 0.5em;
+        }
+    }
+    #close-icon{
+        position: absolute;
+        top: 6.5%;
+        left: 94.75%;
+        transform: translate(-50%, -50%);
+        height: 3em;
+        width: 3em;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    #close-icon:hover{
+        height: 3.5em;
+        width: 3.5em;
+    }
+    .middle-one{
+        background: #f1f2f6;
+        height: 35rem;
+        width: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .right-side{
+        display: grid;
+        text-align: left;
+        position: absolute;
+        top: 50%;
+        left: 72.5%;
+        transform: translate(-50%, -50%);
+        a:hover::after{
+            color: #f1f2f6;
+        }
+        a:nth-child(1):hover::after{
+            content: ' 01';
+            font-size: 0.5em;
+        }
+        a:nth-child(2):hover::after{
+            content: ' 02';
+            font-size: 0.5em;
+        }
+    }
+    @media screen and (max-width: $S9){
+        a{
+            font-size: 2em;
+        }
+        a:hover{
+            font-size: 2.5em;
+        }
+        .left-side{
+            left: 0%;
+        }
+        .middle-one{
+            height: 20em;
+        }
+        .right-side{
+            left: 100%;
+        }
+        #close-icon{
+            height: 30px;
+            width: 30px;
+            left: 86.5%;
+        }
+    }
+    @media screen and (max-width: $iPad){
+        a{
+            font-size: 3em;
+        }
+        a:hover{
+            font-size: 3.5em;
+        }
+        .left-side{
+            left: 27.5%;
+        }
+        .middle-one{
+            height: 25em;
+        }
+        .right-side{
+            left: 72.5%;
+        }
+        #close-icon{
+            height: 30px;
+            width: 30px;
+            left: 90%;
+        }
+    }
+    @media screen and (max-width: $iPhone-6-7-8){
+        a{
+            font-size: 2em;
+        }
+        a:hover{
+            font-size: 2.5em;
+        }
+        .left-side{
+            left: 0%;
+        }
+        .middle-one{
+            height: 20em;
+        }
+        .right-side{
+            left: 100%;
+        }
+        #close-icon{
+            height: 30px;
+            width: 30px;
+            left: 86.5%;
+        }
+    }
+}
+.info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f1f2f6;
+}
