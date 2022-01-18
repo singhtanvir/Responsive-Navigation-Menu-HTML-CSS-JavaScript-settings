@@ -1,1 +1,1 @@
-# Responsive-Navigation-Menu-HTML-CSS-JavaScript-settings
+# Responsive-Navigation-Menu-HTML-CSS-JavaScript
